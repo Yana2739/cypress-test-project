@@ -1,20 +1,25 @@
-const { defineConfig } = require("cypress");
+const { defineConfig } = require('cypress')
+
+const environment = process.env.configFile || 'qauto'
+
+const currentConfig = require(`./config/${environment}.config.js`)
 
 module.exports = defineConfig({
-  e2e: {
-    baseUrl: "https://example.com",
-    viewportWidth: 1280,
-    viewportHeight: 720,
+  reporter: 'mochawesome',
 
-    video: false,
-
-    retries: {
-      runMode: 1,
-      openMode: 0
-    },
-
-    setupNodeEvents(on, config) {
-      return config;
-    },
+  reporterOptions: {
+    reportDir: 'cypress/reports',
+    overwrite: false,
+    html: true,
+    json: true
   },
-});
+
+  e2e: {
+    baseUrl: currentConfig.baseUrl,
+
+    env: {
+      userEmail: currentConfig.user.email,
+      userPassword: currentConfig.user.password
+    }
+  }
+})
