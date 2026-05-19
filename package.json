@@ -1,0 +1,20 @@
+{
+  "name": "cypress-test-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:open:qauto": "cross-env configFile=qauto cypress open",
+    "cy:open:qauto2": "cross-env configFile=qauto2 cypress open",
+    "cy:run:qauto": "cross-env configFile=qauto cypress run",
+    "cy:run:qauto2": "cross-env configFile=qauto2 cypress run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "cypress": "^15.14.2",
+    "mochawesome": "^7.1.4"
+  }
+}
