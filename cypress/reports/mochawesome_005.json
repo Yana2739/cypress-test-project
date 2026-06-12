@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-19T15:47:52.556Z",
+    "end": "2026-05-19T15:47:59.670Z",
+    "duration": 7114,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d553155b-a4ca-4ee5-9c4e-be277dd6337d",
+      "title": "",
+      "fullFile": "cypress/e2e/garage.cy.js",
+      "file": "cypress/e2e/garage.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9745e9bc-cc37-41f8-8ad8-26524215face",
+          "title": "Garage and expenses tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should add a new car",
+              "fullTitle": "Garage and expenses tests Should add a new car",
+              "timedOut": null,
+              "duration": 3104,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_GaragePage.default.openAddCarModal();\n_GaragePage.default.selectBrand('BMW');\n_GaragePage.default.selectModel('X5');\n_GaragePage.default.typeMileage('100');\n_GaragePage.default.clickAddButton();\ncy.contains('BMW X5');",
+              "err": {},
+              "uuid": "e2f2d5cf-6904-404d-b4bd-99bd784cbc92",
+              "parentUUID": "9745e9bc-cc37-41f8-8ad8-26524215face",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should add fuel expense",
+              "fullTitle": "Garage and expenses tests Should add fuel expense",
+              "timedOut": null,
+              "duration": 3953,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_GaragePage.default.openAddCarModal();\n_GaragePage.default.selectBrand('Audi');\n_GaragePage.default.selectModel('TT');\n_GaragePage.default.typeMileage('200');\n_GaragePage.default.clickAddButton();\n_ExpensesPage.default.openAddExpenseModal();\n_ExpensesPage.default.typeMileage('300');\n_ExpensesPage.default.typeLiters('20');\n_ExpensesPage.default.typeTotalCost('1000');\n_ExpensesPage.default.clickAddExpenseButton();\ncy.contains('20');\ncy.contains('1000');",
+              "err": {},
+              "uuid": "2c914899-3701-46e6-8723-9197b0c5a239",
+              "parentUUID": "9745e9bc-cc37-41f8-8ad8-26524215face",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e2f2d5cf-6904-404d-b4bd-99bd784cbc92",
+            "2c914899-3701-46e6-8723-9197b0c5a239"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7057,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

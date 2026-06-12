@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-19T15:48:08.975Z",
+    "end": "2026-05-19T15:48:12.692Z",
+    "duration": 3717,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "016badf5-2e4c-4cdc-9cc7-14975e460a26",
+      "title": "",
+      "fullFile": "cypress/e2e/ui-elements.cy.js",
+      "file": "cypress/e2e/ui-elements.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1863d7ab-5bad-4834-8421-0940fca19b4d",
+          "title": "UI Header and Footer elements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should find all header buttons",
+              "fullTitle": "UI Header and Footer elements should find all header buttons",
+              "timedOut": null,
+              "duration": 851,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('header').should('be.visible').within(() => {\n  cy.get('button').should('exist');\n  cy.get('a').should('exist');\n});",
+              "err": {},
+              "uuid": "0bd5e684-d457-46b0-b289-87e5c28b7c96",
+              "parentUUID": "1863d7ab-5bad-4834-8421-0940fca19b4d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should find all footer links",
+              "fullTitle": "UI Header and Footer elements should find all footer links",
+              "timedOut": null,
+              "duration": 2295,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('footer').should('be.visible').within(() => {\n  cy.get('a').should('have.length.at.least', 1);\n});",
+              "err": {},
+              "uuid": "fd27b629-72ca-4533-aa1c-7fc8716dc15a",
+              "parentUUID": "1863d7ab-5bad-4834-8421-0940fca19b4d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0bd5e684-d457-46b0-b289-87e5c28b7c96",
+            "fd27b629-72ca-4533-aa1c-7fc8716dc15a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3146,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
