@@ -1,0 +1,219 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-19T15:48:00.348Z",
+    "end": "2026-05-19T15:48:08.302Z",
+    "duration": 7954,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "da96420c-1d07-4e8b-a3a8-dbe549501866",
+      "title": "",
+      "fullFile": "cypress/e2e/registration.cy.js",
+      "file": "cypress/e2e/registration.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "72b54c30-acbe-46cc-ad55-af5be32e4311",
+          "title": "Registration form validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should validate Name field",
+              "fullTitle": "Registration form validation Should validate Name field",
+              "timedOut": null,
+              "duration": 1339,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#signupName').type('A').blur();\ncy.get('.invalid-feedback').should('contain', 'Name has to be from 2 to 20 characters long');\ncy.get('#signupName').clear().type('  John  ').blur();",
+              "err": {},
+              "uuid": "86c3274a-37a4-48fc-918a-3498d57950b2",
+              "parentUUID": "72b54c30-acbe-46cc-ad55-af5be32e4311",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should validate Last name field",
+              "fullTitle": "Registration form validation Should validate Last name field",
+              "timedOut": null,
+              "duration": 651,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#signupLastName').type('B').blur();\ncy.get('.invalid-feedback').should('contain', 'Last name has to be from 2 to 20 characters long');",
+              "err": {},
+              "uuid": "f9deae70-a33b-4705-94ee-9356fa619c7d",
+              "parentUUID": "72b54c30-acbe-46cc-ad55-af5be32e4311",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should validate Email field",
+              "fullTitle": "Registration form validation Should validate Email field",
+              "timedOut": null,
+              "duration": 647,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#signupEmail').type('invalidEmail').blur();\ncy.get('.invalid-feedback').should('contain', 'Email is incorrect');",
+              "err": {},
+              "uuid": "bb53e238-184e-418f-b370-f669ade53f06",
+              "parentUUID": "72b54c30-acbe-46cc-ad55-af5be32e4311",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should validate Password rules",
+              "fullTitle": "Registration form validation Should validate Password rules",
+              "timedOut": null,
+              "duration": 661,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#signupPassword').type('123').blur();\ncy.get('.invalid-feedback').should('contain', 'Password has to be from 8 to 15 characters long');",
+              "err": {},
+              "uuid": "0592710b-1ded-44c9-a044-934cdba4e37a",
+              "parentUUID": "72b54c30-acbe-46cc-ad55-af5be32e4311",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should check password match",
+              "fullTitle": "Registration form validation Should check password match",
+              "timedOut": null,
+              "duration": 865,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#signupPassword').type('Qwerty123');\ncy.get('#signupRepeatPassword').type('Qwerty124').blur();\ncy.get('.invalid-feedback').should('contain', 'Passwords do not match');",
+              "err": {},
+              "uuid": "924ab501-6da9-443d-b954-6717dee92452",
+              "parentUUID": "72b54c30-acbe-46cc-ad55-af5be32e4311",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should show errors for empty fields",
+              "fullTitle": "Registration form validation Should show errors for empty fields",
+              "timedOut": null,
+              "duration": 404,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#signupName').focus().blur();\ncy.get('#signupLastName').focus().blur();\ncy.get('#signupName').should('have.class', 'is-invalid');\ncy.get('#signupLastName').should('have.class', 'is-invalid');",
+              "err": {},
+              "uuid": "aea3942e-bbce-46c3-adc6-734bdf9df5cc",
+              "parentUUID": "72b54c30-acbe-46cc-ad55-af5be32e4311",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should register new user successfully",
+              "fullTitle": "Registration form validation Should register new user successfully",
+              "timedOut": null,
+              "duration": 2506,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#signupName').type('John');\ncy.get('#signupLastName').type('Wick');\ncy.get('#signupEmail').type(`test${Date.now()}@mail.com`);\ncy.get('#signupPassword').type('Qwerty123');\ncy.get('#signupRepeatPassword').type('Qwerty123');\ncy.contains('Register').should('not.be.disabled').click();\ncy.contains('Sign up').should('not.exist');",
+              "err": {},
+              "uuid": "af0cc424-9027-42ad-bbdd-458e5441d0a5",
+              "parentUUID": "72b54c30-acbe-46cc-ad55-af5be32e4311",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "86c3274a-37a4-48fc-918a-3498d57950b2",
+            "f9deae70-a33b-4705-94ee-9356fa619c7d",
+            "bb53e238-184e-418f-b370-f669ade53f06",
+            "0592710b-1ded-44c9-a044-934cdba4e37a",
+            "924ab501-6da9-443d-b954-6717dee92452",
+            "aea3942e-bbce-46c3-adc6-734bdf9df5cc",
+            "af0cc424-9027-42ad-bbdd-458e5441d0a5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7073,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
